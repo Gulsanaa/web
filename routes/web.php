@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
+use App\Models\Mysdu;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +21,16 @@ Route::get('/', function () {
 
 Route::get('/', function () {
     return view('user');
+});
+
+Route::get('mysdu/add', function(){
+    DB:table('mysdu')->insert([
+        'name'=> 'Gulsana',
+        'age'=> 19
+    ]);
+});
+
+Route::get('mysdu', function(){
+    $mysdu = Mysdu::find(1);
+    return $mysdu->name;
 });

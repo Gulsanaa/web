@@ -30,7 +30,7 @@ Route::get('mysdu/add', function(){
     ]);
 });
 
-Route::get('mysdu', function(){
+Route::get('mysdu', function() {
     $mysdu = Mysdu::find(1);
     return $mysdu->name;
 });

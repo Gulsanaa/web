@@ -26,6 +26,7 @@ Route::get('/', function () {
 Route::get('mysdu/add', function(){
     DB:table('mysdu')->insert([
         'name'=> 'Gulsana',
+        'surname'=>'Duisenbek',
         'age'=> 19
     ]);
 });

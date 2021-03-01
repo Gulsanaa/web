@@ -16,6 +16,7 @@ class CreateMysduTable extends Migration
         Schema::create('mysdu', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('surname');
             $table->integer('age');
             $table->timestamps();
         });
